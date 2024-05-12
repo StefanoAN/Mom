@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6; /* Cambiado el color de fondo */
+}
+
+.sobre {
+    background-color: #ffb3b3; /* Cambiado el color del sobre */
+    padding: 20px;
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadida sombra */
+    overflow: hidden; /* Añadido para ocultar parte de los triángulos */
+}
+
+.triangulo-izquierdo,
+.triangulo-derecho {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.triangulo-izquierdo {
+    border-width: 100px 0 100px 50px; /* Cambiado el ancho de los triángulos */
+    border-right-color: #a8ff78; /* Cambiado el color de la solapa */
+    left: -50px; /* Ajustado el posicionamiento */
+    top: 0;
+}
+
+.triangulo-derecho {
+    border-width: 100px 50px 100px 0; /* Cambiado el ancho de los triángulos */
+    border-left-color: #a8ff78; /* Cambiado el color de la solapa */
+    right: -50px; /* Ajustado el posicionamiento */
+    top: 0;
+}
+
+.sobre::before,
+.sobre::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Ajustado el ancho de las solapas */
+    height: 100%;
+    background-color: #a8ff78; /* Cambiado el color de las solapas a verde claro */
+    z-index: -1; /* Añadido para que estén detrás del contenido */
+}
+
+.sobre::before {
+    left: -50px; /* Ajustado el posicionamiento */
+    top: 0;
+}
+
+.sobre::after {
+    right: -50px; /* Ajustado el posicionamiento */
+    top: 0;
+}
+
+.carta {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 400px;
+}
+
+.oculto {
+    display: none;
+}
+
+.corazon {
+    font-size: 24px;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#mensaje-sobre h1 {
+    text-align: center;
+}
+
+#carta h2 {
+    text-align: center;
+}
+
+.mensaje-pequeño {
+    font-size: 14px;
+    text-align: center;
+}
